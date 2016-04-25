@@ -11,174 +11,251 @@ project(':fermat-dap-api').projectDir = new File('DAP/library/api/fermat-dap-api
 include ':fermat-dap-core'
 project(':fermat-dap-core').projectDir = new File('DAP/library/core/fermat-dap-core')
 
-//asset wallet
-include ':fermat-dap-plugin-wallet-assets-issuer-wallet-bitdubai'
-project(':fermat-dap-plugin-wallet-assets-issuer-wallet-bitdubai').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-assets-issuer-wallet-bitdubai')
-
-include ':fermat-dap-plugin-wallet-assets-user-wallet-bitdubai'
-project(':fermat-dap-plugin-wallet-assets-user-wallet-bitdubai').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-assets-user-wallet-bitdubai')
-
-include ':fermat-dap-plugin-wallet-redeem-point-wallet-bitdubai'
-project(':fermat-dap-plugin-wallet-redeem-point-wallet-bitdubai').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-redeem-point-wallet-bitdubai')
-
-//wallet module
-include ':fermat-dap-plugin-wallet-module-asset-issuer-bitdubai'
-project(':fermat-dap-plugin-wallet-module-asset-issuer-bitdubai').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-asset-issuer-bitdubai')
-
-include ':fermat-dap-plugin-wallet-module-asset-user-bitdubai'
-project(':fermat-dap-plugin-wallet-module-asset-user-bitdubai').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-asset-user-bitdubai')
-
-include ':fermat-dap-plugin-wallet-module-redeem-point-bitdubai'
-project(':fermat-dap-plugin-wallet-module-redeem-point-bitdubai').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-redeem-point-bitdubai')
-
-//Sup app module
-include ':fermat-dap-plugin-sub-app-module-asset-factory-bitdubai'
-project(':fermat-dap-plugin-sub-app-module-asset-factory-bitdubai').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-factory-bitdubai')
-
-include ':fermat-dap-plugin-sub-app-module-asset-issuer-community-bitdubai'
-project(':fermat-dap-plugin-sub-app-module-asset-issuer-community-bitdubai').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-issuer-community-bitdubai')
-
-include ':fermat-dap-plugin-sub-app-module-asset-user-community-bitdubai'
-project(':fermat-dap-plugin-sub-app-module-asset-user-community-bitdubai').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-user-community-bitdubai')
-
-include ':fermat-dap-plugin-sub-app-module-redeem-point-community-bitdubai'
-project(':fermat-dap-plugin-sub-app-module-redeem-point-community-bitdubai').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-redeem-point-community-bitdubai')
-
-// middleware
-include ':fermat-dap-plugin-middleware-asset-factory-bitdubai'
-project(':fermat-dap-plugin-middleware-asset-factory-bitdubai').projectDir = new File('DAP/plugin/middleware/fermat-dap-plugin-middleware-asset-factory-bitdubai')
-
-// negotiation transaction
-include ':fermat-dap-plugin-negotiation-transaction-direct-sell-negotiation-bitdubai'
-project(':fermat-dap-plugin-negotiation-transaction-direct-sell-negotiation-bitdubai').projectDir = new File('DAP/plugin/negotiation_transaction/fermat-dap-plugin-negotiation-transaction-direct-sell-negotiation-bitdubai')
-
-// business transaction
-include ':fermat-dap-plugin-business-transaction-asset-direct-sell-bitdubai'
-project(':fermat-dap-plugin-business-transaction-asset-direct-sell-bitdubai').projectDir = new File('DAP/plugin/business_transaction/fermat-dap-plugin-business-transaction-asset-direct-sell-bitdubai')
-
-// digital asset transaction
-include ':fermat-dap-plugin-digital-asset-transaction-asset-issuing-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-asset-issuing-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-issuing-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-asset-distribution-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-asset-distribution-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-distribution-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-asset-transfer-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-asset-transfer-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-transfer-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-asset-reception-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-asset-reception-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-reception-bitdubai')
-
-include ':fermat-dap-plugin-funds-transaction-asset-seller-bitdubai'
-project(':fermat-dap-plugin-funds-transaction-asset-seller-bitdubai').projectDir = new File('DAP/plugin/funds_transaction/fermat-dap-plugin-funds-transaction-asset-seller-bitdubai')
-
-include ':fermat-dap-plugin-funds-transaction-asset-buyer-bitdubai'
-project(':fermat-dap-plugin-funds-transaction-asset-buyer-bitdubai').projectDir = new File('DAP/plugin/funds_transaction/fermat-dap-plugin-funds-transaction-asset-buyer-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-issuer-redemption-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-issuer-redemption-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-issuer-redemption-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-user-redemption-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-user-redemption-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-user-redemption-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-asset-appropriation-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-asset-appropriation-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-appropriation-bitdubai')
-
-include ':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation-bitdubai'
-project(':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation-bitdubai').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-issuer-appropriation-bitdubai')
-
-// network-service
-include ':fermat-dap-plugin-network-service-asset-transmission-bitdubai'
-project(':fermat-dap-plugin-network-service-asset-transmission-bitdubai').projectDir = new File('DAP/plugin/network_service/fermat-dap-plugin-network-service-asset-transmission-bitdubai')
+// agent
+include ':fermat-dap-plugin-agent-asset-miner'
+project(':fermat-dap-plugin-agent-asset-miner').projectDir = new File('DAP/plugin/agent/fermat-dap-plugin-agent-asset-miner')
 
 // actor
-include ':fermat-dap-plugin-actor-asset-issuer-bitdubai'
-project(':fermat-dap-plugin-actor-asset-issuer-bitdubai').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-asset-issuer-bitdubai')
+include ':fermat-dap-plugin-actor-asset-issuer'
+project(':fermat-dap-plugin-actor-asset-issuer').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-asset-issuer')
 
-include ':fermat-dap-plugin-actor-asset-user-bitdubai'
-project(':fermat-dap-plugin-actor-asset-user-bitdubai').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-asset-user-bitdubai')
+include ':fermat-dap-plugin-actor-asset-user'
+project(':fermat-dap-plugin-actor-asset-user').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-asset-user')
 
-include ':fermat-dap-plugin-actor-redeem-point-bitdubai'
-project(':fermat-dap-plugin-actor-redeem-point-bitdubai').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-redeem-point-bitdubai')
+include ':fermat-dap-plugin-actor-redeem-point'
+project(':fermat-dap-plugin-actor-redeem-point').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-redeem-point')
 
+// ACTOR CONNECTION
+include ':fermat-dap-plugin-actor-connection-asset-issuer'
+project(':fermat-dap-plugin-actor-connection-asset-issuer').projectDir = new File('DAP/plugin/actor_connection/fermat-dap-plugin-actor-connection-asset-issuer')
 
+include ':fermat-dap-plugin-actor-connection-asset-user'
+project(':fermat-dap-plugin-actor-connection-asset-user').projectDir = new File('DAP/plugin/actor_connection/fermat-dap-plugin-actor-connection-asset-user')
 
-
-// identity
-include ':fermat-dap-plugin-identity-asset-issuer-bitdubai'
-project(':fermat-dap-plugin-identity-asset-issuer-bitdubai').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-asset-issuer-bitdubai')
-
-include ':fermat-dap-plugin-identity-asset-user-bitdubai'
-project(':fermat-dap-plugin-identity-asset-user-bitdubai').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-asset-user-bitdubai')
-
-include ':fermat-dap-plugin-identity-redeem-point-bitdubai'
-project(':fermat-dap-plugin-identity-redeem-point-bitdubai').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-redeem-point-bitdubai')
-
-
-include ':fermat-dap-android-desktop-wallet-manager-bitdubai'
-project(':fermat-dap-android-desktop-wallet-manager-bitdubai').projectDir = new File('DAP/android/desktop/fermat-dap-android-desktop-wallet-manager-bitdubai')
-
-include ':fermat-dap-android-desktop-sub-app-manager-bitdubai'
-project(':fermat-dap-android-desktop-sub-app-manager-bitdubai').projectDir = new File('DAP/android/desktop/fermat-dap-android-desktop-sub-app-manager-bitdubai')
-
-
-//module
+include ':fermat-dap-plugin-actor-connection-redeem-point'
+project(':fermat-dap-plugin-actor-connection-redeem-point').projectDir = new File('DAP/plugin/actor_connection/fermat-dap-plugin-actor-connection-redeem-point')
 
 
 // actor network service
-include ':fermat-dap-plugin-actor-network-service-asset-user-bitdubai'
-project(':fermat-dap-plugin-actor-network-service-asset-user-bitdubai').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-asset-user-bitdubai')
+include ':fermat-dap-plugin-actor-network-service-asset-user'
+project(':fermat-dap-plugin-actor-network-service-asset-user').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-asset-user')
 
-include ':fermat-dap-plugin-actor-network-service-redeem-point-bitdubai'
-project(':fermat-dap-plugin-actor-network-service-redeem-point-bitdubai').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-redeem-point-bitdubai')
+include ':fermat-dap-plugin-actor-network-service-redeem-point'
+project(':fermat-dap-plugin-actor-network-service-redeem-point').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-redeem-point')
 
-include ':fermat-dap-plugin-actor-network-service-redeem-point-bitdubai'
-project(':fermat-dap-plugin-actor-network-service-redeem-point-bitdubai').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-redeem-point-bitdubai')
+include ':fermat-dap-plugin-actor-network-service-redeem-point'
+project(':fermat-dap-plugin-actor-network-service-redeem-point').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-redeem-point')
 
-include ':fermat-dap-plugin-actor-network-service-asset-issuer-bitdubai'
-project(':fermat-dap-plugin-actor-network-service-asset-issuer-bitdubai').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-asset-issuer-bitdubai')
+include ':fermat-dap-plugin-actor-network-service-asset-issuer'
+project(':fermat-dap-plugin-actor-network-service-asset-issuer').projectDir = new File('DAP/plugin/actor_network_service/fermat-dap-plugin-actor-network-service-asset-issuer')
+
+//business transaction
+include ':fermat-dap-plugin-business-transaction-asset-hold'
+project(':fermat-dap-plugin-business-transaction-asset-hold').projectDir = new File('DAP/plugin/business_transaction/fermat-dap-plugin-business-transaction-asset-hold')
+
+include ':fermat-dap-plugin-business-transaction-asset-unhold'
+project(':fermat-dap-plugin-business-transaction-asset-unhold').projectDir = new File('DAP/plugin/business_transaction/fermat-dap-plugin-business-transaction-asset-unhold')
+
+//Crypto Transaction
+include ':fermat-dap-plugin-crypto-transaction-asset-incoming'
+project(':fermat-dap-plugin-crypto-transaction-asset-incoming').projectDir = new File('DAP/plugin/crypto_transaction/fermat-dap-plugin-crypto-transaction-asset-incoming')
+
+include ':fermat-dap-plugin-crypto-transaction-asset-outgoing'
+project(':fermat-dap-plugin-crypto-transaction-asset-outgoing').projectDir = new File('DAP/plugin/crypto_transaction/fermat-dap-plugin-crypto-transaction-asset-outgoing')
 
 
+// digital asset transaction
+include ':fermat-dap-plugin-digital-asset-transaction-asset-issuing'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-issuing').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-issuing')
 
-// actor
-include ':fermat-dap-plugin-actor-asset-issuer-bitdubai'
-project(':fermat-dap-plugin-actor-asset-issuer-bitdubai').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-asset-issuer-bitdubai')
+include ':fermat-dap-plugin-digital-asset-transaction-asset-break'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-break').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-break')
 
-include ':fermat-dap-plugin-actor-redeem-point-bitdubai'
-project(':fermat-dap-plugin-actor-redeem-point-bitdubai').projectDir = new File('DAP/plugin/actor/fermat-dap-plugin-actor-redeem-point-bitdubai')
+include ':fermat-dap-plugin-digital-asset-transaction-asset-distribution'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-distribution').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-distribution')
+
+include ':fermat-dap-plugin-digital-asset-transaction-asset-transfer'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-transfer').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-transfer')
+
+include ':fermat-dap-plugin-digital-asset-transaction-asset-reception'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-reception').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-reception')
+
+include ':fermat-dap-plugin-digital-asset-transaction-issuer-redemption'
+project(':fermat-dap-plugin-digital-asset-transaction-issuer-redemption').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-issuer-redemption')
+
+include ':fermat-dap-plugin-digital-asset-transaction-user-redemption'
+project(':fermat-dap-plugin-digital-asset-transaction-user-redemption').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-user-redemption')
+
+include ':fermat-dap-plugin-digital-asset-transaction-multi-transaction-asset-issuing'
+project(':fermat-dap-plugin-digital-asset-transaction-multi-transaction-asset-issuing').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-multi-transaction-asset-issuing')
+
+include ':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption'
+project(':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption')
+
+include ':fermat-dap-plugin-digital-asset-transaction-asset-appropriation'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-appropriation').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-appropriation')
+
+include ':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation'
+project(':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-issuer-appropriation')
+
+include ':fermat-dap-plugin-digital-asset-transaction-asset-single-transaction-issuing'
+project(':fermat-dap-plugin-digital-asset-transaction-asset-single-transaction-issuing').projectDir = new File('DAP/plugin/digital_asset_transaction/fermat-dap-plugin-digital-asset-transaction-asset-single-transaction-issuing')
+
+//funds transactions
+
+include ':fermat-dap-plugin-funds-transaction-asset-seller'
+project(':fermat-dap-plugin-funds-transaction-asset-seller').projectDir = new File('DAP/plugin/funds_transaction/fermat-dap-plugin-funds-transaction-asset-seller')
+
+include ':fermat-dap-plugin-funds-transaction-asset-buyer'
+project(':fermat-dap-plugin-funds-transaction-asset-buyer').projectDir = new File('DAP/plugin/funds_transaction/fermat-dap-plugin-funds-transaction-asset-buyer')
+
+// identity
+include ':fermat-dap-plugin-identity-asset-issuer'
+project(':fermat-dap-plugin-identity-asset-issuer').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-asset-issuer')
+
+include ':fermat-dap-plugin-identity-asset-user'
+project(':fermat-dap-plugin-identity-asset-user').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-asset-user')
+
+include ':fermat-dap-plugin-identity-redeem-point'
+project(':fermat-dap-plugin-identity-redeem-point').projectDir = new File('DAP/plugin/identity/fermat-dap-plugin-identity-redeem-point')
+
+//metadata
+include ':fermat-dap-plugin-metadata-digital-asset'
+project(':fermat-dap-plugin-metadata-digital-asset').projectDir = new File('DAP/plugin/metadata/fermat-dap-plugin-metadata-digital-asset')
+
+//metadata_transaction
+include ':fermat-dap-plugin-metadata-transaction-incoming-asset-metadata'
+project(':fermat-dap-plugin-metadata-transaction-incoming-asset-metadata').projectDir = new File('DAP/plugin/metadata_transaction/fermat-dap-plugin-metadata-transaction-incoming-asset-metadata')
+
+include ':fermat-dap-plugin-metadata-transaction-outgoing-asset-metadata'
+project(':fermat-dap-plugin-metadata-transaction-outgoing-asset-metadata').projectDir = new File('DAP/plugin/metadata_transaction/fermat-dap-plugin-metadata-transaction-outgoing-asset-metadata')
+
+
+// middleware
+include ':fermat-dap-plugin-middleware-asset-factory'
+project(':fermat-dap-plugin-middleware-asset-factory').projectDir = new File('DAP/plugin/middleware/fermat-dap-plugin-middleware-asset-factory')
+
+// network-service
+include ':fermat-dap-plugin-network-service-asset-transmission'
+project(':fermat-dap-plugin-network-service-asset-transmission').projectDir = new File('DAP/plugin/network_service/fermat-dap-plugin-network-service-asset-transmission')
+
+//offer
+include ':fermat-dap-plugin-offer-asset-specific'
+project(':fermat-dap-plugin-offer-asset-specific').projectDir = new File('DAP/plugin/offer/fermat-dap-plugin-offer-asset-specific')
+
+//offer transaction
+
+include ':fermat-dap-plugin-offer-transaction-incoming-asset-offer'
+project(':fermat-dap-plugin-offer-transaction-incoming-asset-offer').projectDir = new File('DAP/plugin/offer_transaction/fermat-dap-plugin-offer-transaction-incoming-asset-offer')
+
+include ':fermat-dap-plugin-offer-transaction-outgoing-asset-offer'
+project(':fermat-dap-plugin-offer-transaction-outgoing-asset-offer').projectDir = new File('DAP/plugin/offer_transaction/fermat-dap-plugin-offer-transaction-outgoing-asset-offer')
+
+//statistic aggregator
+include ':fermat-dap-plugin-statistic-aggregator-asset-issuer'
+project(':fermat-dap-plugin-statistic-aggregator-asset-issuer').projectDir = new File('DAP/plugin/statistic_aggregator/fermat-dap-plugin-statistic-aggregator-asset-issuer')
+
+//statistic collector
+include ':fermat-dap-plugin-statistic-collector-asset-transfer'
+project(':fermat-dap-plugin-statistic-collector-asset-transfer').projectDir = new File('DAP/plugin/statistic_collector/fermat-dap-plugin-statistic-collector-asset-transfer')
+
+//Sup app module
+include ':fermat-dap-plugin-sub-app-module-asset-factory'
+project(':fermat-dap-plugin-sub-app-module-asset-factory').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-factory')
+
+include ':fermat-dap-plugin-sub-app-module-asset-issuer-community'
+project(':fermat-dap-plugin-sub-app-module-asset-issuer-community').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-issuer-community')
+
+include ':fermat-dap-plugin-sub-app-module-asset-user-community'
+project(':fermat-dap-plugin-sub-app-module-asset-user-community').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-asset-user-community')
+
+include ':fermat-dap-plugin-sub-app-module-redeem-point-community'
+project(':fermat-dap-plugin-sub-app-module-redeem-point-community').projectDir = new File('DAP/plugin/sub_app_module/fermat-dap-plugin-sub-app-module-redeem-point-community')
+
+//swap transaction
+
+include ':fermat-dap-plugin-swap-transaction-asset-for-bitcoin'
+project(':fermat-dap-plugin-swap-transaction-asset-for-bitcoin').projectDir = new File('DAP/plugin/swap_transaction/fermat-dap-plugin-swap-transaction-asset-for-bitcoin')
+
+include ':fermat-dap-plugin-swap-transaction-bitcoin-for-asset'
+project(':fermat-dap-plugin-swap-transaction-bitcoin-for-asset').projectDir = new File('DAP/plugin/swap_transaction/fermat-dap-plugin-swap-transaction-bitcoin-for-asset')
+
+//user level business transaction
+include ':fermat-dap-plugin-user-level-business-transaction-asset-transfer'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-transfer').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-transfer')
+
+include ':fermat-dap-plugin-user-level-business-transaction-asset-redemption'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-redemption').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-redemption')
+
+include ':fermat-dap-plugin-user-level-business-transaction-asset-distribution'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-distribution').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-distribution')
+
+include ':fermat-dap-plugin-user-level-business-transaction-asset-issuing'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-issuing').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-issuing')
+
+include ':fermat-dap-plugin-user-level-business-transaction-asset-fixed-bitcoin-price-direct-private-sell'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-fixed-bitcoin-price-direct-private-sell').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-fixed-bitcoin-price-direct-private-sell')
+
+include ':fermat-dap-plugin-user-level-business-transaction-asset-break'
+project(':fermat-dap-plugin-user-level-business-transaction-asset-break').projectDir = new File('DAP/plugin/user_level_business_transaction/fermat-dap-plugin-user-level-business-transaction-asset-break')
+
+
+//wallet module
+include ':fermat-dap-plugin-wallet-module-asset-issuer'
+project(':fermat-dap-plugin-wallet-module-asset-issuer').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-asset-issuer')
+
+include ':fermat-dap-plugin-wallet-module-asset-user'
+project(':fermat-dap-plugin-wallet-module-asset-user').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-asset-user')
+
+include ':fermat-dap-plugin-wallet-module-redeem-point'
+project(':fermat-dap-plugin-wallet-module-redeem-point').projectDir = new File('DAP/plugin/wallet_module/fermat-dap-plugin-wallet-module-redeem-point')
+
+//ANDROID----------------
+include ':fermat-dap-android-desktop-wallet-manager'
+project(':fermat-dap-android-desktop-wallet-manager').projectDir = new File('DAP/android/desktop/fermat-dap-android-desktop-wallet-manager')
+
+include ':fermat-dap-android-desktop-sub-app-manager'
+project(':fermat-dap-android-desktop-sub-app-manager').projectDir = new File('DAP/android/desktop/fermat-dap-android-desktop-sub-app-manager')
 
 // android dap wallets
-include ':fermat-dap-android-reference-wallet-asset-issuer-bitdubai'
-project(':fermat-dap-android-reference-wallet-asset-issuer-bitdubai').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-asset-issuer-bitdubai')
+include ':fermat-dap-android-reference-wallet-asset-issuer'
+project(':fermat-dap-android-reference-wallet-asset-issuer').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-asset-issuer')
 
-include ':fermat-dap-android-reference-wallet-asset-user-bitdubai'
-project(':fermat-dap-android-reference-wallet-asset-user-bitdubai').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-asset-user-bitdubai')
+include ':fermat-dap-android-reference-wallet-asset-user'
+project(':fermat-dap-android-reference-wallet-asset-user').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-asset-user')
 
-include ':fermat-dap-android-reference-wallet-redeem-point-bitdubai'
-project(':fermat-dap-android-reference-wallet-redeem-point-bitdubai').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-redeem-point-bitdubai')
+include ':fermat-dap-android-reference-wallet-redeem-point'
+project(':fermat-dap-android-reference-wallet-redeem-point').projectDir = new File('DAP/android/reference_wallet/fermat-dap-android-reference-wallet-redeem-point')
 
 // android dap sub apps
-include ':fermat-dap-android-sub-app-asset-factory-bitdubai'
-project(':fermat-dap-android-sub-app-asset-factory-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-factory-bitdubai')
+include ':fermat-dap-android-sub-app-asset-factory'
+project(':fermat-dap-android-sub-app-asset-factory').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-factory')
 
-include ':fermat-dap-android-sub-app-asset-issuer-community-bitdubai'
-project(':fermat-dap-android-sub-app-asset-issuer-community-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-issuer-community-bitdubai')
+include ':fermat-dap-android-sub-app-asset-issuer-community'
+project(':fermat-dap-android-sub-app-asset-issuer-community').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-issuer-community')
 
-include ':fermat-dap-android-sub-app-asset-user-community-bitdubai'
-project(':fermat-dap-android-sub-app-asset-user-community-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-user-community-bitdubai')
+include ':fermat-dap-android-sub-app-asset-user-community'
+project(':fermat-dap-android-sub-app-asset-user-community').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-user-community')
 
-include ':fermat-dap-android-sub-app-redeem-point-community-bitdubai'
-project(':fermat-dap-android-sub-app-redeem-point-community-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-redeem-point-community-bitdubai')
+include ':fermat-dap-android-sub-app-redeem-point-community'
+project(':fermat-dap-android-sub-app-redeem-point-community').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-redeem-point-community')
 
 // android dap identities
-include ':fermat-dap-android-sub-app-asset-issuer-identity-bitdubai'
-project(':fermat-dap-android-sub-app-asset-issuer-identity-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-issuer-identity-bitdubai')
+include ':fermat-dap-android-sub-app-asset-issuer-identity'
+project(':fermat-dap-android-sub-app-asset-issuer-identity').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-issuer-identity')
 
-include ':fermat-dap-android-sub-app-asset-user-identity-bitdubai'
-project(':fermat-dap-android-sub-app-asset-user-identity-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-user-identity-bitdubai')
+include ':fermat-dap-android-sub-app-asset-user-identity'
+project(':fermat-dap-android-sub-app-asset-user-identity').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-asset-user-identity')
 
-include ':fermat-dap-android-sub-app-redeem-point-identity-bitdubai'
-project(':fermat-dap-android-sub-app-redeem-point-identity-bitdubai').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-redeem-point-identity-bitdubai')
+include ':fermat-dap-android-sub-app-redeem-point-identity'
+project(':fermat-dap-android-sub-app-redeem-point-identity').projectDir = new File('DAP/android/sub_app/fermat-dap-android-sub-app-redeem-point-identity')
+
+//asset wallet
+include ':fermat-dap-plugin-wallet-assets-issuer-wallet'
+project(':fermat-dap-plugin-wallet-assets-issuer-wallet').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-assets-issuer-wallet')
+
+include ':fermat-dap-plugin-wallet-assets-user-wallet'
+project(':fermat-dap-plugin-wallet-assets-user-wallet').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-assets-user-wallet')
+
+include ':fermat-dap-plugin-wallet-redeem-point-wallet'
+project(':fermat-dap-plugin-wallet-redeem-point-wallet').projectDir = new File('DAP/plugin/wallet/fermat-dap-plugin-wallet-redeem-point-wallet')

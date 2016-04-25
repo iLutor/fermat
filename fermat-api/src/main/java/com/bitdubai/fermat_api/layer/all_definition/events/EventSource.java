@@ -45,6 +45,8 @@ public enum EventSource implements FermatEnum {
     INCOMING_EXTRA_USER                     ("IEU"),
     OUTGOING_INTRA_USER                     ("OIU"),
     INCOMING_INTRA_USER                     ("IIU"),
+    OUTGOING_METADATA_TRANSACTION           ("OMT"),
+    INCOMING_METADATA_TRANSACTION           ("IMT"),
     MIDDLEWARE_APP_RUNTIME_PLUGIN           ("MAR"),
     MIDDLEWARE_CHAT_MANAGER                 ("MWCM"),
     MIDDLEWARE_MONEY_REQUEST_PLUGIN         ("MMR"),
@@ -78,6 +80,7 @@ public enum EventSource implements FermatEnum {
     WS_COMMUNICATION_CLOUD_CLIENT_PLUGIN    ("WSCCLCL"),
     USER_LEVEL_CUSTOMER_BROKER_PURCHASE_MANAGER ("ULCBPM"),
     USER_LEVEL_CUSTOMER_BROKER_SALE_MANAGER ("ULCBSM"),
+    TIMEOUT_NOTIFIER("TON"),
     CCP_OUTGOING_DRAFT_TRANSACTION("CCPODT");
 
     private final String code;
@@ -151,6 +154,7 @@ public enum EventSource implements FermatEnum {
             case "WSCCC" : return WS_COMMUNICATION_CLOUD_CLIENT_PLUGIN;
             case "ULCBPM" : return USER_LEVEL_CUSTOMER_BROKER_PURCHASE_MANAGER;
             case "ULCBSM" : return USER_LEVEL_CUSTOMER_BROKER_SALE_MANAGER;
+            case "TON"  :   return TIMEOUT_NOTIFIER;
             case "CCPODT": return CCP_OUTGOING_DRAFT_TRANSACTION;
 
             default: throw new InvalidParameterException(

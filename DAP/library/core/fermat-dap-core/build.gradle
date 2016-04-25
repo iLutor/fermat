@@ -13,51 +13,109 @@ dependencies {
     compile project(':fermat-api')
     compile project(':fermat-core-api')
 
-    compile project(':fermat-dap-plugin-actor-asset-issuer-bitdubai')
-    compile project(':fermat-dap-plugin-actor-asset-user-bitdubai')
-    compile project(':fermat-dap-plugin-actor-redeem-point-bitdubai')
+    //AGENT
+    compile project(':fermat-dap-plugin-agent-asset-miner')
 
-    compile project(':fermat-dap-plugin-actor-network-service-asset-issuer-bitdubai')
-    compile project(':fermat-dap-plugin-actor-network-service-asset-user-bitdubai')
-    compile project(':fermat-dap-plugin-actor-network-service-redeem-point-bitdubai')
+    //ACTOR
+    compile project(':fermat-dap-plugin-actor-asset-issuer')
+    compile project(':fermat-dap-plugin-actor-asset-user')
+    compile project(':fermat-dap-plugin-actor-redeem-point')
 
-    compile project(':fermat-dap-plugin-business-transaction-asset-direct-sell-bitdubai')
+    //ACTOR CONNECTION
+    compile project(':fermat-dap-plugin-actor-connection-asset-issuer')
+    compile project(':fermat-dap-plugin-actor-connection-asset-user')
+    compile project(':fermat-dap-plugin-actor-connection-redeem-point')
+    
+    //ACTOR NS
+    compile project(':fermat-dap-plugin-actor-network-service-asset-issuer')
+    compile project(':fermat-dap-plugin-actor-network-service-asset-user')
+    compile project(':fermat-dap-plugin-actor-network-service-redeem-point')
 
-    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-appropriation-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-distribution-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-transfer-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-issuing-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-reception-bitdubai')
-    compile project(':fermat-dap-plugin-funds-transaction-asset-seller-bitdubai')
-    compile project(':fermat-dap-plugin-funds-transaction-asset-buyer-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-issuer-redemption-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption-bitdubai')
-    compile project(':fermat-dap-plugin-digital-asset-transaction-user-redemption-bitdubai')
+    //BUSINESS TRANSACTION
+    compile project(':fermat-dap-plugin-business-transaction-asset-hold')
+    compile project(':fermat-dap-plugin-business-transaction-asset-unhold')
 
+    //CRYPTO TRANSACTION
+    compile project(':fermat-dap-plugin-crypto-transaction-asset-incoming')
+    compile project(':fermat-dap-plugin-crypto-transaction-asset-outgoing')
 
-    compile project(':fermat-dap-plugin-identity-asset-issuer-bitdubai')
-    compile project(':fermat-dap-plugin-identity-asset-user-bitdubai')
-    compile project(':fermat-dap-plugin-identity-redeem-point-bitdubai')
+    //DIGITAL ASSET TRANSACTION
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-appropriation')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-break')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-distribution')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-transfer')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-issuing')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-reception')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-issuer-appropriation')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-issuer-redemption')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-multi-transaction-asset-issuing')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-redeem-point-redemption')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-user-redemption')
+    compile project(':fermat-dap-plugin-digital-asset-transaction-asset-single-transaction-issuing')
 
-    compile project(':fermat-dap-plugin-middleware-asset-factory-bitdubai')
+    //FUNDS TRANSACTION
+    compile project(':fermat-dap-plugin-funds-transaction-asset-seller')
+    compile project(':fermat-dap-plugin-funds-transaction-asset-buyer')
 
-    compile project(':fermat-dap-plugin-negotiation-transaction-direct-sell-negotiation-bitdubai')
+    //IDENTITY
+    compile project(':fermat-dap-plugin-identity-asset-issuer')
+    compile project(':fermat-dap-plugin-identity-asset-user')
+    compile project(':fermat-dap-plugin-identity-redeem-point')
 
-    compile project(':fermat-dap-plugin-network-service-asset-transmission-bitdubai')
+    //METADATA
+    compile project(':fermat-dap-plugin-metadata-digital-asset')
 
-    compile project(':fermat-dap-plugin-sub-app-module-asset-factory-bitdubai')
-    compile project(':fermat-dap-plugin-sub-app-module-asset-issuer-community-bitdubai')
-    compile project(':fermat-dap-plugin-sub-app-module-asset-user-community-bitdubai')
-    compile project(':fermat-dap-plugin-sub-app-module-redeem-point-community-bitdubai')
+    //METADATA TRANSACTION
+    compile project(':fermat-dap-plugin-metadata-transaction-incoming-asset-metadata')
+    compile project(':fermat-dap-plugin-metadata-transaction-outgoing-asset-metadata')
 
-    compile project(':fermat-dap-plugin-wallet-assets-issuer-wallet-bitdubai')
-    compile project(':fermat-dap-plugin-wallet-assets-user-wallet-bitdubai')
-    compile project(':fermat-dap-plugin-wallet-redeem-point-wallet-bitdubai')
+    //MIDDLEWARE
+    compile project(':fermat-dap-plugin-middleware-asset-factory')
 
-    compile project(':fermat-dap-plugin-wallet-module-asset-issuer-bitdubai')
-    compile project(':fermat-dap-plugin-wallet-module-asset-user-bitdubai')
-    compile project(':fermat-dap-plugin-wallet-module-redeem-point-bitdubai')
+    //NETWORK SERVICE
+    compile project(':fermat-dap-plugin-network-service-asset-transmission')
+
+    //OFFER
+    compile project(':fermat-dap-plugin-offer-asset-specific')
+
+    //OFFER TRANSACTION
+
+    compile project(':fermat-dap-plugin-offer-transaction-incoming-asset-offer')
+    compile project(':fermat-dap-plugin-offer-transaction-outgoing-asset-offer')
+
+    //STATISTIC AGGREGATOR
+    compile project(':fermat-dap-plugin-statistic-aggregator-asset-issuer')
+
+    //STATISTIC COLLECTOR
+    compile project(':fermat-dap-plugin-statistic-collector-asset-transfer')
+
+    //SUB-APP MODULE
+    compile project(':fermat-dap-plugin-sub-app-module-asset-factory')
+    compile project(':fermat-dap-plugin-sub-app-module-asset-issuer-community')
+    compile project(':fermat-dap-plugin-sub-app-module-asset-user-community')
+    compile project(':fermat-dap-plugin-sub-app-module-redeem-point-community')
+
+    //SWAP TRANSACTION
+    compile project(':fermat-dap-plugin-swap-transaction-asset-for-bitcoin')
+    compile project(':fermat-dap-plugin-swap-transaction-bitcoin-for-asset')
+
+    //USER LEVEL BUSINESS TRANSACTION
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-transfer')
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-redemption')
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-distribution')
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-issuing')
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-fixed-bitcoin-price-direct-private-sell')
+    compile project(':fermat-dap-plugin-user-level-business-transaction-asset-break')
+
+    //WALLET
+    compile project(':fermat-dap-plugin-wallet-assets-issuer-wallet')
+    compile project(':fermat-dap-plugin-wallet-assets-user-wallet')
+    compile project(':fermat-dap-plugin-wallet-redeem-point-wallet')
+
+    //WALLET MODULE
+    compile project(':fermat-dap-plugin-wallet-module-asset-issuer')
+    compile project(':fermat-dap-plugin-wallet-module-asset-user')
+    compile project(':fermat-dap-plugin-wallet-module-redeem-point')
 
     testCompile 'junit:junit:4.12'
 }
