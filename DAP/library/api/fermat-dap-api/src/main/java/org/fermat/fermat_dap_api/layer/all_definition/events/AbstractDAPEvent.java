@@ -7,7 +7,7 @@ import com.bitdubai.fermat_api.layer.all_definition.events.interfaces.FermatEven
 /**
  * Created by Nerio on 27/10/15.
  */
-public class AbstractDAPEvent implements FermatEvent {
+public abstract class AbstractDAPEvent implements FermatEvent {
 
     private final FermatEventEnum eventType;
 
