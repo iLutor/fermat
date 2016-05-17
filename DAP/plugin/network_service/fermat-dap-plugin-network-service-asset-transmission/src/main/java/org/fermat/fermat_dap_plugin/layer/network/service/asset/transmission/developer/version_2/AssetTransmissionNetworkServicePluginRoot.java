@@ -20,6 +20,7 @@ import com.bitdubai.fermat_api.layer.osa_android.database_system.Database;
 import org.fermat.fermat_dap_api.layer.all_definition.enums.DAPMessageSubject;
 import org.fermat.fermat_dap_api.layer.all_definition.enums.DAPMessageType;
 import org.fermat.fermat_dap_api.layer.all_definition.enums.EventType;
+import org.fermat.fermat_dap_api.layer.all_definition.events.ReceivedNewDigitalAssetMetadataNotificationEvent;
 import org.fermat.fermat_dap_api.layer.all_definition.network_service_message.DAPMessage;
 import org.fermat.fermat_dap_api.layer.all_definition.network_service_message.exceptions.CantGetDAPMessagesException;
 import org.fermat.fermat_dap_api.layer.all_definition.network_service_message.exceptions.CantSendMessageException;
@@ -128,12 +129,14 @@ public class AssetTransmissionNetworkServicePluginRoot extends AbstractNetworkSe
     @Override
     public void onNewMessagesReceive(FermatMessage newFermatMessageReceive) { //Logica tomada del handler NewReceiveMessagesNotificationEventHandler
         System.out.println("NEW MESSAGE RECEIVED!!!");
-        FermatEvent event = getEventManager().getNewEvent(EventType.RECEIVE_NEW_DAP_MESSAGE);
+        DAPMessage mes = DAPMessage.fromXML(newFermatMessageReceive.getContent());
+        ReceivedNewDigitalAssetMetadataNotificationEvent event = (ReceivedNewDigitalAssetMetadataNotificationEvent) getEventManager().getNewEvent(EventType.RECEIVE_NEW_DAP_MESSAGE);
+        event.setMessage(mes);
         event.setSource(AssetTransmissionNetworkServicePluginRoot.EVENT_SOURCE);
         getEventManager().raiseEvent(event);
 
         try {
-            dapMessageDAO.create(DAPMessage.fromXML(newFermatMessageReceive.getContent()), MessageStatus.NEW_RECEIVED);
+            dapMessageDAO.create(mes, MessageStatus.NEW_RECEIVED);
         } catch (org.fermat.fermat_dap_plugin.layer.network.service.asset.transmission.developer.version_2.exceptions.CantInsertRecordDataBaseException e) {
             e.printStackTrace();
         }

@@ -42,9 +42,16 @@ public class IncomingAssetMetadataDeveloperDatabaseFactory {
         List<DeveloperDatabaseTable> tables = new ArrayList<>();
 
         List<String> incomingAssetMetadataColumns = new ArrayList<>();
-        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ID_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_MESSAGE_ID_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_MESSAGE_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ATTEMPTS_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_STATUS_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ACTOR_FROM_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ACTOR_TO_COLUMN_NAME);
+        incomingAssetMetadataColumns.add(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TIMESTAMP_COLUMN_NAME);
 
-        DeveloperDatabaseTable incomingAssetMetadataTable = developerObjectFactory.getNewDeveloperDatabaseTable(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE, incomingAssetMetadataColumns);
+        DeveloperDatabaseTable incomingAssetMetadataTable = developerObjectFactory.getNewDeveloperDatabaseTable(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE_NAME, incomingAssetMetadataColumns);
         tables.add(incomingAssetMetadataTable);
 
         List<String> eventsRecordedColumns = new ArrayList<>();

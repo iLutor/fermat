@@ -38,15 +38,22 @@ public final class IncomingAssetMetadataDatabaseFactory {
             DatabaseTableFactory digitalAssetMetadataTable;
             DatabaseFactory databaseFactory = database.getDatabaseFactory();
 
-            digitalAssetMetadataTable = databaseFactory.newTableFactory(pluginId, IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE);
-            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_COLUMN_NAME, DatabaseDataType.STRING, 100, Boolean.TRUE);
+            digitalAssetMetadataTable = databaseFactory.newTableFactory(pluginId, IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE_NAME);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ID_COLUMN_NAME, DatabaseDataType.STRING, 100, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_MESSAGE_ID_COLUMN_NAME, DatabaseDataType.STRING, 100, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_MESSAGE_COLUMN_NAME, DatabaseDataType.STRING, 250, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ATTEMPTS_COLUMN_NAME, DatabaseDataType.INTEGER, 100, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_STATUS_COLUMN_NAME, DatabaseDataType.STRING, 10, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ACTOR_TO_COLUMN_NAME, DatabaseDataType.STRING, 100, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ACTOR_FROM_COLUMN_NAME, DatabaseDataType.STRING, 100, Boolean.TRUE);
+            digitalAssetMetadataTable.addColumn(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TIMESTAMP_COLUMN_NAME, DatabaseDataType.LONG_INTEGER, 100, Boolean.FALSE);
 
-            digitalAssetMetadataTable.addIndex(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_COLUMN_NAME);
+            digitalAssetMetadataTable.addIndex(IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_ID_COLUMN_NAME);
             try {
                 //Create the table
                 databaseFactory.createTable(pluginId, digitalAssetMetadataTable);
             } catch (CantCreateTableException cantCreateTableException) {
-                throw new CantCreateDatabaseException(CantCreateDatabaseException.DEFAULT_MESSAGE, cantCreateTableException, "Creating " + IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE + " table", "Exception not handled by the plugin, There is a problem and I cannot create the table.");
+                throw new CantCreateDatabaseException(CantCreateDatabaseException.DEFAULT_MESSAGE, cantCreateTableException, "Creating " + IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_TABLE_NAME + " table", "Exception not handled by the plugin, There is a problem and I cannot create the table.");
             }
 
             DatabaseTableFactory eventsRecorderTable = databaseFactory.newTableFactory(pluginId, IncomingAssetMetadataDatabaseConstants.INCOMING_ASSET_METADATA_EVENTS_RECORDED_TABLE_NAME);

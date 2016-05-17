@@ -9,6 +9,7 @@ import com.bitdubai.fermat_api.layer.all_definition.exceptions.InvalidParameterE
 
 import org.fermat.fermat_dap_api.layer.all_definition.events.DigitalAssetMetadataConfirmSentEvent;
 import org.fermat.fermat_dap_api.layer.all_definition.events.DigitalAssetMetadataSuccessfullySentEvent;
+import org.fermat.fermat_dap_api.layer.all_definition.events.NewIncomingMetadataEvent;
 import org.fermat.fermat_dap_api.layer.all_definition.listeners.DefaultDAPEventListener;
 
 /**
@@ -152,7 +153,19 @@ public enum EventType implements FermatEventEnum {
         public FermatEvent getNewEvent() {
             return new DigitalAssetMetadataConfirmSentEvent();
         }
-    };
+    },
+    NEW_INCOMING_ASSET_METADATA("NAIM") {
+        @Override
+        public FermatEventListener getNewListener(FermatEventMonitor fermatEventMonitor) {
+            return new DefaultDAPEventListener<>(this, fermatEventMonitor);
+        }
+
+        @Override
+        public FermatEvent getNewEvent() {
+            return new NewIncomingMetadataEvent();
+        }
+    }
+    ;
 
     /**
      * Represent the code of the message status

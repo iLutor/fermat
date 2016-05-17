@@ -3,15 +3,17 @@ package org.fermat.fermat_dap_plugin.layer.metadata_transaction.incoming_asset_m
 import com.bitdubai.fermat_api.FermatException;
 import com.bitdubai.fermat_api.layer.all_definition.enums.ServiceStatus;
 import com.bitdubai.fermat_api.layer.all_definition.events.interfaces.FermatEvent;
-import com.bitdubai.fermat_api.layer.all_definition.events.interfaces.FermatEventHandler;
 import com.bitdubai.fermat_api.layer.all_definition.events.interfaces.FermatEventListener;
 import com.bitdubai.fermat_api.layer.all_definition.util.Validate;
 import com.bitdubai.fermat_pip_api.layer.platform_service.event_manager.interfaces.EventManager;
 
+import org.fermat.fermat_dap_api.layer.all_definition.enums.EventType;
 import org.fermat.fermat_dap_api.layer.dap_transaction.common.exceptions.CantSaveEventException;
 import org.fermat.fermat_dap_api.layer.dap_transaction.common.exceptions.CantStartServiceException;
 import org.fermat.fermat_dap_api.layer.dap_transaction.common.interfaces.AssetTransactionService;
+import org.fermat.fermat_dap_plugin.layer.metadata_transaction.incoming_asset_metadata.developer.version_1.IncomingAssetMetadataPluginRoot;
 import org.fermat.fermat_dap_plugin.layer.metadata_transaction.incoming_asset_metadata.developer.version_1.structure.database.IncomingAssetMetadataDAO;
+import org.fermat.fermat_dap_plugin.layer.metadata_transaction.incoming_asset_metadata.developer.version_1.structure.functional.IncomingAssetMetadataTransactionManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,8 @@ public class IncomingAssetMetadataRecorderService implements AssetTransactionSer
     private final UUID pluginId;
     private final IncomingAssetMetadataDAO dao;
     private List<FermatEventListener> listenersAdded;
+    private IncomingAssetMetadataPluginRoot incomingAssetMetadataPluginRoot;
+    private final IncomingAssetMetadataTransactionManager incomingAssetMetadataTransactionManager;
 
     {
         listenersAdded = new ArrayList<>();
@@ -40,10 +44,12 @@ public class IncomingAssetMetadataRecorderService implements AssetTransactionSer
 
     //CONSTRUCTORS
 
-    public IncomingAssetMetadataRecorderService(EventManager eventManager, UUID pluginId, IncomingAssetMetadataDAO dao) {
+    public IncomingAssetMetadataRecorderService(EventManager eventManager, UUID pluginId, IncomingAssetMetadataDAO dao, IncomingAssetMetadataPluginRoot incomingAssetMetadataPluginRoot,IncomingAssetMetadataTransactionManager incomingAssetMetadataTransactionManager) {
         this.eventManager = eventManager;
         this.pluginId = pluginId;
         this.dao = dao;
+        this.incomingAssetMetadataPluginRoot = incomingAssetMetadataPluginRoot;
+        this.incomingAssetMetadataTransactionManager= incomingAssetMetadataTransactionManager;
     }
 
     //PUBLIC METHODS
@@ -53,7 +59,11 @@ public class IncomingAssetMetadataRecorderService implements AssetTransactionSer
         String context = "Plugin ID: " + pluginId + " Event Manager: " + eventManager;
         try {
             FermatEventListener fermatEventListener;
-            FermatEventHandler fermatEventHandler = new IncomingAssetMetadataEventHandler(this);
+            fermatEventListener = eventManager.getNewListener(EventType.RECEIVE_NEW_DAP_MESSAGE);
+            fermatEventListener.setEventHandler(new IncomingAssetMetadataEventHandler(incomingAssetMetadataTransactionManager));
+            eventManager.addListener(fermatEventListener);
+            listenersAdded.add(fermatEventListener);
+
         } catch (Exception e) {
             throw new CantStartServiceException(e, context, "An unexpected exception happened while trying to start the AssetAppropriationRecordeService.");
         }
